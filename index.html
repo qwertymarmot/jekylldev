@@ -1,0 +1,60 @@
+---
+layout: default
+title: Welcome to My Site
+cover: 'assets/images/cover1.jpg'
+class: 'home-template'
+navigation: True
+logo: 'assets/images/logo_white.png'
+current: home
+imagecredit_id: '@danielleone'
+imagecredit_name: 'Daniel Leone'
+---
+<!-- < default -->
+<!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
+
+<!-- The big featured header  -->
+<header class="main-header {% if page.cover %}"
+        style="background-image: url({{ site.baseurl }}{{ page.cover }}) {% else %}no-cover{% endif %}">
+    <nav class="main-nav overlay clearfix">
+        {% if page.logo %}<a class="blog-logo" href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{{ page.logo }}" alt="Blog Logo" /></a>{% endif %}
+        {% if page.navigation %}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {% endif %}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{ site.name }}</h1>
+            <h2 class="page-description">{{ site.description }}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+<!-- The main content area on the homepage -->
+<main id="content" class="content" style="margin:4rem;" role="main">
+
+    <!-- The tag below includes the post loop - partials/loop.hbs -->
+        <p>
+            This is my personal site. It also serves the purpose of being a public facing
+            interface for my personal knowledge management system. This system is
+            influenced by the Zettelkasten and Digital Garden systems. Below are some
+            links to the indexes for specific areas of notes or knowledge. Each index should be a good
+            starting point into specific areas of the knowledge base.<br><br>
+            I keep a log of my current activities in my <a href="../now">now</a> page. This page is inspired by a movement started by Derek Sivers. I tend to not post much to social media so this is a quick way to see what I am doing with my time.<br><br>
+            Lastly I also write blogs, though somewhat inconsistently (I'm trying to get better about it). You can see a list of my blogs <a href="https://blog.iambrandoncole.com">here</a>.
+        </p>
+        <h3>My Digital Garden</h3>
+        <a href="../notes/00-Meta">
+          00s Meta
+        </a><br>
+        <a href="../notes/10-Personal">
+          10s Personal
+        </a><br>
+        <a href="../notes/20-Interests">
+          20s Interests
+        </a><br>
+        <a href="../notes/30-Notes">
+          30s Notes
+        </a><br>
+{% include usplash_credits.html %}
+</main>
