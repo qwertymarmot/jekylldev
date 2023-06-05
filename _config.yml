@@ -14,7 +14,7 @@ description: "&quotSharing knowledge is the most fundamental act of friendship. 
 google_analytics: G-P8PT9CR3L3
 disqus: username
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: '/'
+baseurl: '/jekylldev'
 url: 'https://www.iambrandoncole.com'
 
 # Permalinks
